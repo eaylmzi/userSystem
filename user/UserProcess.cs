@@ -16,7 +16,7 @@ namespace userApplication
         public string path = "Data Source=DESKTOP-VQJHFAN;Initial Catalog=userDatabase;Integrated Security=True";
         public bool addUser(string name, string password, string email, IFormFile png)
         {
-            
+
             try
             {
                 SqlConnection connection = new SqlConnection(path);

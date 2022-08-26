@@ -11,79 +11,47 @@
     <title>Document</title>
   </head>
   <style>
- 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.login {
-    margin-top: 75px;
-    border: 3px solid #080808;
-    border-radius: 2%;
-    background-color: gray;
-}
 
-.input {
-    justify-content: center;
-    margin: 10px 20px;
-}
 
-.size {
-    width: 250px;
-    height: 250px;
-    max-width: 250px;
-    max-height: 250px;
-}
-.width {
-    width: 270px;
-    height: 630px;
-    background-color: #7E7E7E;
-}
+
 
 
   </style>
-  <body class="bg">
+  
+  <body class="body-image">
+    
     <div class="container">
       <form method="post" enctype="multipart/form-data">
       <div class="login">
 
-        <div class="input">
+        <div class="login__input-margin">
           <div>
-          <img class="size" id="img" class="cover-image" src="/user/user-icon.png" />
+          <img class="login__image-size cover-image" id="img" src="/user/user-icon.png" />
           </div>
         </div>
       
-        <div class="input inputBox">
+        <div class="login__input-margin inputBox">
           <input type="text" name="Name" required="required" />
           <span>First Name</span>
           <i></i>
         </div>
-       
-       
-        <div class="input inputBox">
+               
+        <div class="login__input-margin inputBox">
           <input type="text" name="Password" required="required" />
           <span>Password</span>
           <i></i>
         </div>
-      
-
-     
-        <div class="input inputBox">
+    
+        <div class="login__input-margin inputBox">
           <input type="text" name="Email" required="required" />
           <span>E-mail</span>
           <i></i>
+          
         
         </div>
-    
-        <div class="input inputBox">
+        <div class="login__input-margin inputBox">
           <input
             type="file"
             name="Png"
@@ -95,22 +63,22 @@
           <i></i>
         </div>
 
-        <div class="input form-group">
+        <div class="login__input-margin form-group">
           <label for="isAdded">@ViewBag.user</label>
         </div>
      
         
-        <div class="input form-group d-grid gap-2 ">
-          <div><input class="buttons" type="submit" value="Submit" /></div>
+        <div class="login__input-margin form-group d-grid gap-2 ">
+          <div><input type="submit" class="button-style" value="Submit" /></div>
         </div>
-      
+  
       </form>
       <form action="/UserList/ListOfUser">
          
-
           
-          <div class="input form-group d-grid gap-2 ">
-              <div><input type="submit" class="buttons" value="Delete User" /></div>
+          
+          <div class="login__input-margin form-group d-grid gap-2 ">
+              <div><input type="submit" class="button-style" value="Delete User" /></div>
           </div>
           
           

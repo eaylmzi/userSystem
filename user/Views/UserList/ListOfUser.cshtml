@@ -9,40 +9,44 @@
      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
      crossorigin="anonymous">
     <title></title>
-    <link rel="stylesheet" href="/css/fisek.css">
+    <link rel="stylesheet" href="/css/list-of-user.css">
 </head>
 <body>
-   
-   <div class="container">
-        <div class="col-10 border">
-            lal
-        </div>
-        <div class="col-10 border"> 
-            lal
-        </div>
-        <div class="col-1 loader"></div>
-    </div>
+
+    <div class="margin">
 @foreach (var user in Model)
 {
-    
-    <div style="background-color:#7E7E7E">       
-        <ul>
-            <li class="form-label">@user.Name</li>
-            <li>@user.Password</li>
-            <li>@user.Email</li>
-            <li><img src="/images/@user.Png" alt="Girl in a jacket" width="100" height="200"></li>    
-            
-        </ul> 
-        <div class="loader"></div>
-    </div>
-    <div>
+   
+    <div class="main-div">
+       <div class="inner-div">
+        <div class="item main-div__center"><img src="/images/@user.Png" alt="User photo" width="150" height="150"></div>
+        <div class="item">
+                    <p>Name : </p>
+                    <p> @user.Name</p>
+       </div>
+        <div class="item">
+                    <p>Password : </p>
+                    <p>@user.Password</p>
+           </div>
+        <div class="item">
+                    <p>Email :</p>
+                    <p>@user.Email</p>
+        </div>
+        
+        <div class="main-div__delete-button">
      @using (Html.BeginForm("DeleteUser","UserList",FormMethod.Get)){
          
             <input type="hidden" id="email" name="email" value=@user.Email>            
             <input type="submit" value="Delete">
      }
+        </div>
+       </div>
     </div>
+  
+
+ 
 }
+    </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
